@@ -10,7 +10,7 @@ class CanonBall {
     this.height = 25;
     this.body = Bodies.rectangle(x,y,this.width,this.height,options)
 
-    this.ballImage = loadImage('assets/canonBall.png');
+    //this.ballImage = loadImage('assets/canonBall.png');
     World.add(world, this.body);
   };
 
@@ -22,8 +22,8 @@ class CanonBall {
       push();
       translate(pos.x, pos.y);
       rotate(angle);
-      imageMode(CENTER)
-      image(this.ballImage,0, 0, this.width, this.height);
+      rectMode(CENTER)
+      rect(0, 0, this.width, this.height);
       pop();
     }
   };
